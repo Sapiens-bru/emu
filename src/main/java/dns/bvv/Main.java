@@ -2,12 +2,6 @@ package dns.bvv;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.web.reactive.function.client.WebClient;
-
-import java.util.Collections;
-import java.util.Map;
 
 @SpringBootApplication
 public class Main {
@@ -16,7 +10,8 @@ public class Main {
         for (String arg:args) {
             if (arg.equalsIgnoreCase("-c")) {
                 //client
-                WebClientRequest.connect();
+
+                WebClientRequest.runTest();
                 break;
             } else if (arg.equalsIgnoreCase("-s")) {
                 //server
